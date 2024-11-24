@@ -1,0 +1,10 @@
+Bootstrap: docker
+From: nvidia/cuda:12.0.0-runtime-ubuntu22.04
+%post
+    apt-get -y update
+    apt-get -y install git ffmpeg virtualenv python3-pip g++ wget curl unzip
+    python3 -m pip install -U pip
+    python3 -m pip install -r requirements.txt
+
+%files
+    ./requirements.txt /

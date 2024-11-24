@@ -1,0 +1,20 @@
+contexts:
+  athena:
+    account: ...
+    backend_type: slurm
+    cmd_type: sbatch
+    cpu: 4
+    mem: 16G
+    gpu: 1
+    nodes: 1
+    ntasks: 1
+    modules_to_load:
+      - cuDNN/8.2.1.32-CUDA-11.3.1
+    partition: ...
+    singularity_container: --nv -H $PWD:/homeplaceholder
+      -B $TMPDIR:/tmp
+      --env NEPTUNEPWD=$PWD
+      /path/to/singularity.sif
+    slurm_url: athena
+    storage_dir: /net/pr2/projects/plgrid/plgggroupname/username
+    time: 60
