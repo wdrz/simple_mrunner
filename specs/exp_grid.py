@@ -10,7 +10,7 @@ experiments_list = create_experiments_helper(
     params_grid={
         "matrix_size": [100, 1000],
     },
-    script="python mrun.py",
+    script="python3 mrun.py",
     python_path=".",
     exclude=["singularity.sif", "__pycache__"],
     tags=["eval"],
