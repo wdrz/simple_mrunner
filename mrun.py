@@ -7,6 +7,7 @@ from my_beautiful_code import main
 
 def mrun():
     assert "NEPTUNE_API_TOKEN" in os.environ
+    assert "NEPTUNE_PROJECT_NAME" in os.environ
 
     params = get_configuration(print_diagnostics=True, with_neptune=True)
 
